@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <img src="/images/E-CommerceLogo-1.jpg" alt="Logo" className="h-8 w-48" />
+          <img src="/images/E-CommerceLogo-1.png" alt="Logo" className="h-16 w-48" />
         </div>
 
         {/* Shop Now Button */}
