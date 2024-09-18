@@ -11,18 +11,18 @@ const BannerSection: React.FC = () => {
                 {/* Content overlay */}
                 <div className="relative z-10 flex flex-col items-start justify-center h-full px-6 lg:px-24">
                     {/* Heading */}
-                    <h1 className="text-yellow-500 w-full text-5xl md:text-7xl lg:text-[8rem] font-bold leading-tight">
+                    <h1 className="text-yellow-500 w-full text-4xl md:text-7xl lg:text-[8rem] font-bold leading-tight">
                         THE one8 AFFAIR
                     </h1>
 
                     {/* Subheading */}
                     <div className='flex flex-col items-end'>
-                        <p className="text-white w-2/3 text-lg md:text-xl lg:text-2xl mt-4">
+                        <p className="text-white md:w-2/3 md:text-xl lg:text-2xl mt-4">
                             It is not just a shirt number, it is the prelude of a legacy, a celebration, an inspiration.
                         </p>
                     </div>
                     {/* Know More Button */}
-                    <button className="mt-8 w-1/5 mx-auto px-6 py-3 bg-transparent border border-white text-white text-base md:text-lg lg:text-xl font-semibold hover:bg-white hover:text-black transition-all">
+                    <button className="mt-8 lg:w-1/5 mx-auto px-6 py-3 bg-transparent border border-white text-white md:text-lg lg:text-xl font-semibold hover:bg-white hover:text-black transition-all">
                         KNOW MORE
                     </button>
                 </div>
