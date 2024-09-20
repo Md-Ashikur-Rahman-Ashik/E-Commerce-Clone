@@ -1,5 +1,7 @@
-"use client"
-import { useState, useEffect } from 'react';
+"use client";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,51 +13,85 @@ const Navbar = () => {
       setIsScreenSmall(window.innerWidth <= 768);
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      const menuElement = document.querySelector('.mobile-menu');
-      if (isMenuOpen && menuElement && !menuElement.contains(e.target as Node)) {
+      const menuElement = document.querySelector(".mobile-menu");
+      if (
+        isMenuOpen &&
+        menuElement &&
+        !menuElement.contains(e.target as Node)
+      ) {
         setIsMenuOpen(false);
       }
     };
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, [isMenuOpen]);
 
   return (
-    <nav className="navbar fixed w-full bg-transparent">
+    <nav
+      className="navbar fixed w-full bg-transparent "
+      style={{ zIndex: "9999999" }}
+    >
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <img src="/images/E-CommerceLogo-1.png" alt="Logo" className="h-16 w-48" />
+          <img
+            src="/images/E-CommerceLogo-1.png"
+            alt="Logo"
+            className="h-16 w-48"
+          />
         </div>
 
         {/* Shop Now Button */}
         <div className="flex items-center">
           {!isScreenSmall && (
-            <ul className="flex space-x-8 text-black dark:text-white">
-              <li>WHO WE ARE</li>
-              <li>one8 WORLD</li>
-              <li>one8 RUN</li>
-              <li>one8 FITNESS</li>
-              <li>ASSOCIATION</li>
-              <li>PRESS & MEDIA</li>
-              <li>GET IN TOUCH</li>
+            <ul className="flex   space-x-8 text-white">
+              <li>
+                {" "}
+                <Link href={"#"}>WHO WE ARE</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>one8 WORLD</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>one8 RUN</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>one8 FITNESS</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>ASSOCIATION</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>PRESS & MEDIA</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>GET IN TOUCH</Link>{" "}
+              </li>
             </ul>
           )}
 
           {/* Shop Now Button */}
-          <button className="bg-yellow-500 text-white px-4 py-2 ml-6">Shop Now</button>
+          <button className="bg-yellow-500 text-white px-4 py-2 ml-6">
+            Shop Now
+          </button>
 
           {/* Hamburger Icon for Mobile */}
           {isScreenSmall && (
             <button
-              className={`ml-4 ${isMenuOpen ? 'hidden' : 'block'}`}
+              className={`ml-4 ${isMenuOpen ? "hidden" : "block"}`}
               onClick={() => setIsMenuOpen(true)}
             >
               <div className="w-6 h-0.5 bg-yellow-500 mb-1"></div>
@@ -68,14 +104,41 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="mobile-menu absolute top-0 right-0 w-64 h-screen bg-black bg-opacity-90 flex flex-col justify-center items-start p-8 space-y-6 text-white transform transition-transform duration-300">
+            <button
+              className={`ml-4 ${!isMenuOpen ? "hidden" : "block"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <FaBars color="white" />
+            </button>
             <ul className="text-left text-lg space-y-4">
-              <li>WHO WE ARE</li>
-              <li>one8 WORLD</li>
-              <li>one8 RUN</li>
-              <li>one8 FITNESS</li>
-              <li>ASSOCIATION</li>
-              <li>PRESS & MEDIA</li>
-              <li>GET IN TOUCH</li>
+              <li>
+                {" "}
+                <Link href={"#"}>WHO WE ARE</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>one8 WORLD</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>one8 RUN</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>one8 FITNESS</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>ASSOCIATION</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>PRESS & MEDIA</Link>{" "}
+              </li>
+              <li>
+                {" "}
+                <Link href={"#"}>GET IN TOUCH</Link>{" "}
+              </li>
             </ul>
           </div>
         )}
