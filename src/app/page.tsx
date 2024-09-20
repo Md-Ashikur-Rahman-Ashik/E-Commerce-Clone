@@ -1,5 +1,6 @@
 import BannerSection from "@/components/BannerSection/BannerSection";
 import Navbar from "@/components/Navbar/Navbar";
+import ReadySection from "@/components/ReadySection/ReadySection";
 
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <Navbar></Navbar>
       <BannerSection></BannerSection>
+      <ReadySection></ReadySection>
     </div>
   );
 }
