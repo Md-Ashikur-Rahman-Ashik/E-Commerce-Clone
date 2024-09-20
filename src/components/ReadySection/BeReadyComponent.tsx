@@ -2,7 +2,7 @@ import React from 'react';
 
 const BeReadyComponent: React.FC = () => {
     return (
-        <div className="flex justify-center items-center h-screen bg-black">
+        <div className="flex justify-center items-center h-screen">
             <div className="text-center">
                 {/* First outlined "BE READY" */}
                 <p className="lg:text-[8rem] md:text-7xl text-4xl font-bold outline-gray">BE READY</p>
