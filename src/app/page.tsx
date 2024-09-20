@@ -5,14 +5,13 @@ import BeReadyComponent from "@/components/ReadySection/BeReadyComponent";
 import BeReadySection from "@/components/ReadySection/BeReadySection";
 import ReadySection from "@/components/ReadySection/ReadySection";
 
-import SmokeCanvas from "@/components/smockanimation.jsx";
+import SmokeCanvas from "../components/Smockanimation";
 
 export default function Home() {
   return (
     <div>
-
       <Navbar />
-<SmokeCanvas />      
+      <SmokeCanvas />
       <BannerSection />
       <ReadySection></ReadySection>
       <BeReadyComponent></BeReadyComponent>
