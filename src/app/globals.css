@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom class for text outline */
+.outline-white {
+    color: transparent;
+    opacity: 0.5;
+    -webkit-text-stroke: 1px gray;
+  }
+  
