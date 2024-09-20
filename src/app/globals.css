@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Custom class for text outline */
+.outline-gray {
+  color: transparent;
+  opacity: 0.5;
+  -webkit-text-stroke: 1px gray;
+}
+
+.outline-white {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  opacity: 0.1;
+}
+
 body {
   background-color: black;
 }
+
