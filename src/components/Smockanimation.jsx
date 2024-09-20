@@ -64,7 +64,15 @@ const SmokeCanvas = () => {
   }, []);
 
   return (
-    <canvas ref={canvasRef} style={{ position: "fixed", top: 0, left: 0 }} />
+    <canvas
+      ref={canvasRef}
+      style={{
+        transition: "  all ease 200ms",
+        position: "fixed",
+        top: 0,
+        left: 0,
+      }}
+    />
   );
 };
 
