@@ -6,6 +6,7 @@ import BeReadyComponent from "@/components/ReadySection/BeReadyComponent";
 import BeReadySection from "@/components/ReadySection/BeReadySection";
 import ReadySection from "@/components/ReadySection/ReadySection";
 import SmokeCanvas from "../components/Smockanimation";
+import One8WorldSection from "@/components/One8WorldSection/One8WorldSection";
 
 export default function Home() {
   const [scrollIndex, setScrollIndex] = useState(0);
@@ -44,7 +45,7 @@ export default function Home() {
         <div
           id="scroll-sections"
           className="h-screen w-[400vw] flex"
-          style={{ scrollbarWidth: "none" }} 
+          style={{ scrollbarWidth: "none" }}
         >
           <section className="h-screen w-screen flex-shrink-0 text-white flex justify-center items-center">
             <BannerSection />
@@ -63,6 +64,7 @@ export default function Home() {
           </section>
         </div>
       </div>
+      <One8WorldSection></One8WorldSection>
     </div>
   );
 }
