@@ -111,7 +111,6 @@ export default function Home() {
           <OneWorld />
           <GetIntouchSection />{" "}
         </div>
-        <div></div>
       </div>
     </div>
   );
