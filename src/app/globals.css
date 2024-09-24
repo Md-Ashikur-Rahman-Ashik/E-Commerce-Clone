@@ -33,3 +33,9 @@ body {
 .opacity-hidden {
   opacity: 0;
 }
+
+.outline-yellow {
+  color: transparent;
+  -webkit-text-stroke: 1px #ffc20e;
+  opacity: 1;
+}
