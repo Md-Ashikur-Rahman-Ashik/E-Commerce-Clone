@@ -67,8 +67,9 @@ const SmokeCanvas = () => {
     <canvas
       ref={canvasRef}
       style={{
+        zIndex: "-1",
         transition: "  all ease 200ms",
-        position: "fixed",
+        position: "absolute",
         top: 0,
         left: 0,
       }}
