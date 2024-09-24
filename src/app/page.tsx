@@ -10,14 +10,25 @@ import One8WorldSection from "@/components/One8WorldSection/One8WorldSection";
 
 export default function Home() {
   const [scrollIndex, setScrollIndex] = useState(0);
+  const [horizontalScrollComplete, setHorizontalScrollComplete] = useState(false);
 
   useEffect(() => {
+    // Control body scroll based on horizontal scroll state
+    if (!horizontalScrollComplete) {
+      document.body.style.overflow = "hidden"; // Disable vertical scroll
+    } else {
+      document.body.style.overflow = "auto"; // Enable vertical scroll after horizontal scroll finishes
+    }
+
     const handleScroll = (event: WheelEvent) => {
-      const step = 20; // Increased step for faster scrolling
+      const step = 20; // Scroll step
+
       if (event.deltaY > 0) {
-        setScrollIndex((prev) => Math.min(prev + step, 300)); // Scroll down
+        // Scrolling down
+        setScrollIndex((prev) => Math.min(prev + step, 300));
       } else {
-        setScrollIndex((prev) => Math.max(prev - step, 0)); // Scroll up
+        // Scrolling up
+        setScrollIndex((prev) => Math.max(prev - step, 0));
       }
     };
 
@@ -25,14 +36,22 @@ export default function Home() {
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+      document.body.style.overflow = "auto"; // Ensure vertical scrolling is restored when component unmounts
     };
-  }, []);
+  }, [horizontalScrollComplete]);
 
   useEffect(() => {
     const scrollContainer = document.getElementById("scroll-sections");
     if (scrollContainer) {
       scrollContainer.style.transform = `translateX(-${scrollIndex}vw)`;
-      scrollContainer.style.transition = "transform 0.1s ease-out"; // Faster transition
+      scrollContainer.style.transition = "transform 0.1s ease-out";
+    }
+
+    // Check if horizontal scroll is complete (i.e., at the end)
+    if (scrollIndex >= 300) {
+      setHorizontalScrollComplete(true); // Horizontal scrolling complete
+    } else {
+      setHorizontalScrollComplete(false); // Reset when scrolling back up
     }
   }, [scrollIndex]);
 
@@ -41,6 +60,7 @@ export default function Home() {
       <Navbar />
       <SmokeCanvas />
 
+      {/* Horizontal scrolling section */}
       <div className="h-screen w-full overflow-hidden">
         <div
           id="scroll-sections"
@@ -64,7 +84,13 @@ export default function Home() {
           </section>
         </div>
       </div>
-      <One8WorldSection></One8WorldSection>
+
+      {/* Only display One8WorldSection after horizontal scroll completes */}
+      {horizontalScrollComplete && (
+        <div className="w-full">
+          <One8WorldSection />
+        </div>
+      )}
     </div>
   );
 }
