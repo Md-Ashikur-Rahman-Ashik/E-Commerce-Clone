@@ -65,13 +65,16 @@ const SmokeCanvas = () => {
 
   return (
     <canvas
+      className="md:block "
       ref={canvasRef}
       style={{
         zIndex: "-1",
-        transition: "  all ease 200ms",
+        transition: "all ease 200ms",
         position: "absolute",
         top: 0,
         left: 0,
+        width: "100vw",
+        height: "100vh", // Ensure the canvas covers the full viewport
       }}
     />
   );

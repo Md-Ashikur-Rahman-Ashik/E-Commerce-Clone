@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
@@ -35,16 +36,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar fixed w-full bg-transparent "
+      className="navbar fixed  w-full bg-black "
       style={{ zIndex: "9999999" }}
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <img
+          <Image
+            width={200}
+            height={200}
             src="/images/E-CommerceLogo-1.png"
             alt="Logo"
-            className="h-16 w-48"
           />
         </div>
 
