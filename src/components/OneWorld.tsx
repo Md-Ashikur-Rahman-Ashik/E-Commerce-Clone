@@ -14,7 +14,7 @@ const OneWorld = () => {
   };
   return (
     <>
-      <section className="container">
+      <section className="container bg-black">
         <div
           style={{ height: "max-content" }}
           className="flex-col justify-start items-center h-screen "

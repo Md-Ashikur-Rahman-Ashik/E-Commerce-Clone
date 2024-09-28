@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa6";
 const GetIntouchSection: React.FC = () => {
   return (
     <>
-      <div className="relative container flex-col bg-[#ffc20e] justify-start items-center h-screen">
+      <div className="  container flex-col bg-[#ffc20e] justify-start items-center h-screen">
         {/* Background video or image */}
         <video
           className="absolute inset-0 w-full h-full object-cover z-0"

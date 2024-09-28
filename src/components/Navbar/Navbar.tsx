@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav
       className="navbar fixed  w-full bg-black "
-      style={{ zIndex: "9999999" }}
+      style={{ zIndex: "  9999999" }}
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
@@ -45,7 +45,7 @@ const Navbar = () => {
           <Image
             width={200}
             height={200}
-            src="/images/E-CommerceLogo-1.png"
+            src="/images/logoFornavbar2.jpg"
             alt="Logo"
           />
         </div>

@@ -22,7 +22,7 @@ const contentVariants = {
 
 const MediaVaultSec: React.FC = () => {
   return (
-    <div className="h-screen" style={{ height: "max-content" }}>
+    <div className="h-screen bg-black" style={{ height: "max-content" }}>
       {/* Media Vault Title */}
       <motion.div
         className="m-12"
