@@ -2,7 +2,11 @@ import React from "react";
 
 const BeReadySection: React.FC = () => {
   return (
+
+    <div className="relative flex justify-center items-center h-screen">
+
     <div className="relative flex justify-center items-center h-screen  ">
+
       {/* Background video or image */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -14,7 +18,7 @@ const BeReadySection: React.FC = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
+      <div className="absolute inset-0 opacity-40 z-10"></div>
 
       {/* Text container */}
       <div className="relative z-20 text-center text-white">

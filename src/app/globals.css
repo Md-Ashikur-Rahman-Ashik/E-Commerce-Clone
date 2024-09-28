@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Custom class for text outline */
 .outline-gray {
   color: transparent;
@@ -16,7 +15,248 @@
   opacity: 0.1;
 }
 
+.outline-yellow {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(251, 255, 0);
+  opacity: 2;
+}
+.outline-white2 {
+  color: transparent;
+  -webkit-text-stroke: 4px rgb(255, 255, 255);
+  opacity: 0.9;
+  outline: 12px black;
+}
 body {
   background-color: black;
 }
 
+.opacity-hidden {
+  opacity: 0;
+}
+
+.outline-yellow {
+  color: transparent;
+  -webkit-text-stroke: 1px #ffc20e;
+  opacity: 1;
+}
+.loader_spinner {
+  /* position: absolute; */
+  left: 50%;
+  top: 50%;
+}
+@keyframes spin_360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader_overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  z-index: 1000;
+  --loader_width: 100px;
+  --loader_border_width: 12px;
+}
+
+@media (max-width: 767px) {
+  .loader_overlay {
+    --loader_width: 50px;
+    --loader_border_width: 6px;
+  }
+}
+
+.loader_overlay .loader_spinner:before,
+.loader_overlay .loader_spinner:after {
+  border: var(--loader_border_width) solid white;
+  border-radius: 50%;
+  width: var(--loader_width);
+  height: var(--loader_width);
+  animation: spin_360 2s linear infinite;
+}
+
+.loader_overlay .loader_spinner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.loader_overlay .loader_spinner:before {
+  content: "";
+  border-top-color: transparent;
+}
+
+.loader_overlay .loader_spinner:after {
+  content: "";
+  border-bottom-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: #333;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffc20e;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f4b600;
+}
+
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  min-height: 200vh;
+  animation: body 1s linear;
+}
+@keyframes body {
+  to {
+    background-color: rgb(19, 48, 97);
+  }
+}
+
+.progress {
+  height: 20rem;
+  width: 0%;
+  background-color: #4e4d4d;
+  position: fixed;
+  height: max-content;
+  top: 0;
+  right: 0;
+  animation: progress 3s linear;
+}
+.mediValut {
+  left: 0;
+  top: 0;
+  width: 0; /* Default state before animation */
+  right: 0;
+}
+
+@keyframes media {
+  to {
+    width: 100%;
+  }
+}
+@keyframes progress {
+  to {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+  }
+}
+.scaling {
+  scale: 0;
+  animation: scal 3s linear;
+}
+
+@keyframes scal {
+  to {
+    scale: 100%;
+  }
+}
+
+.side {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background-color: #eee;
+  backface-visibility: visible;
+  top: calc(var(--size) * -0.5);
+  left: calc(var(--size) * -0.5);
+}
+.top {
+  background-color: #fff;
+  transform: rotateX(90deg) translateZ(calc(var(--size) * 0.5));
+}
+.bottom {
+  background-color: #999;
+  transform: rotateX(90deg) translateZ(calc(var(--size) * -0.5));
+}
+.left {
+  background-color: #ccc;
+  transform: rotateY(90deg) translateZ(calc(var(--size) * 0.5));
+}
+.right {
+  background-color: #ddd;
+  transform: rotateY(90deg) translateZ(calc(var(--size) * -0.5));
+}
+.front {
+  background-color: #aaa;
+  transform: translateZ(calc(var(--size) * 0.5));
+}
+.back {
+  background-color: #bbb;
+  transform: translateZ(calc(var(--size) * -0.5));
+}
+
+:root * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -3s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+#bannerSection {
+  position: fixed;
+  margin: auto;
+  inset: 0px auto auto 0px;
+  box-sizing: border-box;
+  width: 1361px;
+  z-index: 1;
+  overflow: hidden;
+  height: 100vh;
+  padding-top: 35vh;
+}
+
+.video_area {
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  border: 2px solid #ffc20e;
+}
+
+@media (orientation: portrait) {
+  #index_page #be_ready_be_better_area .video_area {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 767px) {
+  #index_page #be_ready_be_better_area .video_area {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.video_area:before {
+  content: "";
+  background-image: url("/images/video-img.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#index_page #be_ready_be_better_area .video_area video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  visibility: hidden;
+}
