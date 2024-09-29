@@ -45,7 +45,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <>
       {!ShowContent && <Loadinganimation />}
       {ShowContent && (
         <>
@@ -117,6 +117,9 @@ export default function Home() {
             </div>
           </div>
         </>
-      )}
+      )
+      }
+    </>
+  )
 
-
+}
