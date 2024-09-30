@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // import Swiper JS
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Swiper styles
@@ -29,48 +29,132 @@ const SliderBanner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div>
-            <Image
-              className="h-[500px] w-full rounded-xl relative opacity-80"
-              src="https://i.ibb.co/pyPJS2j/first-Slide.png"
-              alt=""
-              height={500}
-              width={500}
-            />
-            <p className="absolute bg-gradient-to-r from-[#151515] to-[#634a4a] bottom-5 lg:bottom-5 lg:text-4xl text-2xl text-green-200 p-4 rounded-xl md:left-24 lg:left-64 text-center font-bold md:w-3/4 lg:w-2/3 opacity-90">
-              Discover the impact of our medical camps through inspiring success
-              stories
-            </p>
+          <div className="relative w-full h-[500px] bg-black bg-diagonal-lines text-white flex items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+              {/* Text Section */}
+              <div className="flex flex-col space-y-4">
+                <div className="outline-yellow">
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    ODI
+                  </p>
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    TEST
+                  </p>
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    T20
+                  </p>
+                </div>
+                <div className="lg:text-8xl md:text-4xl text-3xl font-extrabold">
+                  #1
+                </div>
+                <p className="text-yellow-500 lg:text-5xl md:text-4xl text-3xl font-medium">
+                  CAREER BEST RANKINGS
+                  <span className="text-white">
+                    {" "}
+                    ACROSS ALL FORMATS OF THE GAME
+                  </span>
+                </p>
+              </div>
+
+              {/* Image Section */}
+              <div className="h-80 w-80">
+                {/* Using Next.js Image Component */}
+                <Image
+                  src="/placeholder-image.jpg"
+                  alt="Player"
+                  layout="fill" // Allows the image to fill the parent container
+                  objectFit="cover" // Makes the image cover the container area
+                  className="rounded-lg"
+                  style={{ borderRadius: "8px" }} // If further custom styling is needed
+                />
+              </div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <Image
-              className="h-[500px] opacity-70 w-full rounded-xl relative"
-              src="https://i.ibb.co/ZMFmpDG/second-Slide.png"
-              alt=""
-              height={500}
-              width={500}
-            />
-            <p className="absolute text-center bottom-5 lg:bottom-5 lg:text-4xl text-2xl text-green-200 bg-gradient-to-r from-[#151515] to-[#634a4a] p-4 rounded-xl md:left-24 lg:left-64 font-bold md:w-3/4 lg:w-2/3 opacity-90">
-              From record-breaking attendance to life-saving interventions, see
-              what we’ve accomplished together
-            </p>
+          <div className="relative w-full h-[500px] bg-black bg-diagonal-lines text-white flex items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+              {/* Text Section */}
+              <div className="flex flex-col space-y-4">
+                <div className="outline-yellow">
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    ODI
+                  </p>
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    TEST
+                  </p>
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    T20
+                  </p>
+                </div>
+                <div className="lg:text-8xl md:text-4xl text-3xl font-extrabold">
+                  #1
+                </div>
+                <p className="text-yellow-500 lg:text-5xl md:text-4xl text-3xl font-medium">
+                  CAREER BEST RANKINGS
+                  <span className="text-white">
+                    {" "}
+                    ACROSS ALL FORMATS OF THE GAME
+                  </span>
+                </p>
+              </div>
+
+              {/* Image Section */}
+              <div className="h-80 w-80">
+                {/* Using Next.js Image Component */}
+                <Image
+                  src="/placeholder-image.jpg"
+                  alt="Player"
+                  layout="fill" // Allows the image to fill the parent container
+                  objectFit="cover" // Makes the image cover the container area
+                  className="rounded-lg"
+                  style={{ borderRadius: "8px" }} // If further custom styling is needed
+                />
+              </div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <Image
-              className="h-[500px] opacity-70 w-full rounded-xl relative"
-              src="https://i.ibb.co/9GgZkW6/third-Slide.png"
-              alt=""
-              height={500}
-              width={500}
-            />
-            <p className="absolute bottom-5 text-center lg:bottom-5 lg:text-4xl text-2xl text-green-200 bg-gradient-to-r from-[#151515] to-[#634a4a] p-4 rounded-xl md:left-24 lg:left-64 font-bold md:w-3/4 lg:w-2/3 opacity-90">
-              Real stories of recovery and hope, made possible by our dedicated
-              team and participants
-            </p>
+          <div className="relative w-full h-[500px] bg-black bg-diagonal-lines text-white flex items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+              {/* Text Section */}
+              <div className="flex flex-col space-y-4">
+                <div className="outline-yellow">
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    ODI
+                  </p>
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    TEST
+                  </p>
+                  <p className="lg:text-6xl md:text-4xl text-3xl font-bold">
+                    T20
+                  </p>
+                </div>
+                <div className="lg:text-8xl md:text-4xl text-3xl font-extrabold">
+                  #1
+                </div>
+                <p className="text-yellow-500 lg:text-5xl md:text-4xl text-3xl font-medium">
+                  CAREER BEST RANKINGS
+                  <span className="text-white">
+                    {" "}
+                    ACROSS ALL FORMATS OF THE GAME
+                  </span>
+                </p>
+              </div>
+
+              {/* Image Section */}
+              <div className="h-80 w-80">
+                {/* Using Next.js Image Component */}
+                <Image
+                  src="/placeholder-image.jpg"
+                  alt="Player"
+                  layout="fill" // Allows the image to fill the parent container
+                  objectFit="cover" // Makes the image cover the container area
+                  className="rounded-lg"
+                  style={{ borderRadius: "8px" }} // If further custom styling is needed
+                />
+              </div>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
